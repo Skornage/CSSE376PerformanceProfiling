@@ -385,6 +385,10 @@ public class Level {
 	 */
 	public void updateTile(int x, int y, int tileID) {
 		this.map[x][y] = tileID;
+		Graphics2D g = img.createGraphics();
+		drawTileImage(tileID, x, y, g);
+		g.dispose();
+		
 	}
 
 	/**
